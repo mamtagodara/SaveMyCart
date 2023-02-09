@@ -1,0 +1,35 @@
+{
+    "name": "cute",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "cute.html",
+        "default_icon": "tweety.png"
+    },
+
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["button.js","product.js","pop.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": ["cute.js"]
+    },
+    
+"icons": {
+    "128": "tweety.png"
+},
+     
+"permissions": ["contextMenus","activeTab","tabs","storage"],
+
+"content_security_policy": "script-src 'self' 'nonce-abcd1234'"
+
+
+
+
+
+
+}
+
